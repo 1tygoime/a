@@ -1,0 +1,100 @@
+////////////////// SB01A
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+int main(){
+    int n;
+    ll x, inp;
+    for(cin >> n >> x; n--; ){
+        cin >> inp;
+        if (inp == x){
+            cout << 'Y';
+            return 0;
+        }
+    }
+    cout << 'N';
+    return 0;
+}
+    /////////////////SB02B
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pb push_back
+
+int main(){
+    ios_base::sync_with_stdio(0);
+    cin.tie(NULL); cout.tie(NULL);
+
+    vector <ll> v;
+    int n, T;
+    ll x;
+    for(cin >> n; n--; ){
+        cin >> x;
+        v.pb(x);
+    }
+    sort(v.begin(), v.end());
+    for(cin >> T; T--; ){
+        cin >> x;
+        cout << (binary_search(v.begin(), v.end(), x) ? 'Y' : 'N') << '\n';
+    }
+    return 0;
+}
+    
+/////////////////SB03B
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pb push_back
+
+int main(){
+    ios_base::sync_with_stdio(0);
+    cin.tie(NULL); cout.tie(NULL);
+
+    vector <ll> v;
+    int n, T;
+    ll x;
+    cin >> n;
+    for(int i = 1; i <= n; i++){
+        v.pb(1LL * i * i + 1);
+    }
+//    for(const auto &c: v) cout << c << '\n';
+    for(cin >> T; T--; ){
+        cin >> x;
+        cout << *lower_bound(v.begin(), v.end(), x) << '\n';
+    }
+    return 0;
+}
+    ////////////SB04B
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pb push_back
+
+int main(){
+    ios_base::sync_with_stdio(0);
+    cin.tie(NULL); cout.tie(NULL);
+
+    set <ll> s;
+    int n, T;
+    ll x;
+    for(cin >> n; n--; ){
+        cin >> x;
+        s.insert(x);
+    }
+    for(cin >> T; T--; ){
+        cin >> x;
+        auto it = s.upper_bound(x);
+        if (it == s.begin()){
+            cout << -1;
+        }
+        else{
+            cout << *(--it);
+        }
+        cout << '\n';
+    }
+    return 0;
+}
+    
