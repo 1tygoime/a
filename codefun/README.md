@@ -388,4 +388,6 @@ CHD1G: Không thể AC
 - Không ủng hộ chép code, việc đưa bạn code để mang tính đảm bảo quyền lợi với người làm bài mà bài bị lỗi
 
 [**Bonus: Editorial CHDxx**](https://codefun.vn/posts?group=&official=false&owner=FREE_11&page=4)
+[**Đề Codefun Contest**](https://drive.google.com/drive/folders/1YV0uEqqZgFXxOawKkQniIgx7ZtQdHm04)
+[**Codefun Problems (Pxxx)**](https://drive.google.com/drive/folders/1ZG0JeScjrmGF689itVyWHe2_OEooFz264)
 
