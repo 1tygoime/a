@@ -339,7 +339,6 @@ P315: Lỗi test
 
     cout << (n % 2 == 0 ? n * n : 0);
 P375: Làm tròn tới chữ số thập phân thứ 6
-
 P379: Kết quả là TOWARD
 
 P382: Sai test
@@ -387,3 +386,6 @@ CHD1G: Không thể AC
 - Wrong Answer thì chưa chắc là do test sai
 - Hãy cố gắng tự bài để có điểm số thực lực chứ đừng là những con số thống kê
 - Không ủng hộ chép code, việc đưa bạn code để mang tính đảm bảo quyền lợi với người làm bài mà bài bị lỗi
+
+[**Bonus: Editorial CHDxx**](https://codefun.vn/posts?group=&official=false&owner=FREE_11&page=4)
+
