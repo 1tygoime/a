@@ -1,22 +1,17 @@
-/* LTo5 */
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-#define ll long long
-#define fast ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
-int n;
-string s;
-unordered_set <string> ok;
+
+char ok[20];
 
 int main(){
-    fast
-    for (cin >> n; n--; ){
-        cin >> s;
-        if(ok.count(s))
-            ok.erase(s);
-        else
-            ok.insert(s);
-    }
-    if (ok.size()) cout << *ok.begin();
-    else cout << -1;
-    return 0;
+  int n, resLen = 0;
+  for(cin >> n; n--; ){
+    string s;
+    cin >> s;
+    for(int i = 0; i < s.size(); i++) ok[i] ^= s[i];
+    resLen ^= s.size();
+  }
+  if(!resLen) return !(cout << -1);
+  for(int i = 0; i < resLen; i++) cout << ok[i];
+  return 0;
 }

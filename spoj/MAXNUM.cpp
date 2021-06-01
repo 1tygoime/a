@@ -1,32 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define ll long long
-
-int a[30005], b[30005], n, p, res = INT_MAX;
+int n, m, res = 1e9;
 
 int main(){
-	memset(a, 0, sizeof(a));
-	memset(b, 0, sizeof(b));
-    cin >> n >> p;
-    for(int i = 2; i <= n; i++){
-        int x = i;
-        for(int j = 2; j * j <= x; j++){
-            while (x % j == 0)
-                x /= j, a[j]++;
-        }
-        if(x > 1) a[x]++;
+  cin >> n >> m;
+
+  for(int i = 2; i <= m; i++){
+    if(m % i == 0){
+      int cnt = 0;
+      while(m % i == 0) m /= i, ++cnt;
+
+      int cnt1 = 0;
+      for(int nn = n; nn / i > 0; nn /= i) cnt1 += nn / i;
+
+      res = min(res, cnt1 / cnt);
     }
-    int x = p;
-    for(int i = 2; i * i <= x; i++){
-        while (x % i == 0)
-            x /= i, b[i]++;
-    }
-    if(x > 1) b[x]++;
-    for(int i = 2; i <= 30001; i++){
-        if (!b[i] || !a[i]) continue;
-        res = min(res, a[i] / b[i]);
-    }
-    cout<<res;
-    return 0;
+  }
+
+  cout << res;
 }
