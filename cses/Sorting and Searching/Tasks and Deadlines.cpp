@@ -1,18 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
-int n;
-ll res(0),t(0);
-pair <ll,ll> dead[200005];
+
+#define f first
+#define s second
+
+pair <long long, long long> a[200000];
+int n; long long res, t;
+
 int main(){
-    cin >> n;
-    for (int i = 0; i < n; i++)
-        cin >> dead[i].first >> dead[i].second;
-    sort(dead,dead+n);
-    for (int i = 0; i < n; i++){
-        t+=dead[i].first;
-        res+=dead[i].second-t;
-    }
-    cout<<res;
-    return 0;
+  ios_base::sync_with_stdio(0);
+  cin.tie(0); cout.tie(0);
+
+  cin >> n;
+  for(int i = 0; i < n; i++) cin >> a[i].f >> a[i].s;
+  sort(a, a + n);
+
+  for(int i = 0; i < n; i++){
+    t += a[i].f;
+    res += a[i].s - t;
+  }
+
+  cout << res;
 }

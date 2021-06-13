@@ -1,25 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
 
-map <ll, int> ok;
-ll x, a[200005];
-int n;
+#define f first
+#define s second
+
+int n, x;
+pair <int, int> a[200005];
 
 int main(){
-    cin >> n >> x;
-    for (int i = 1; i <= n; i++){
-        cin >> a[i];
-        ok[a[i]]=i;
-    }
+  cin >> n >> x;
+  for(int i = 0; i < n; i++) cin >> a[i].f, a[i].s = i + 1;
 
-    for (int i = 1; i <= n; i++){
-        if(ok.count(x - a[i]) && ok[x - a[i]] != i){
-            cout << i << ' ' << ok[x - a[i]];
-            return 0;
-        }
-    }
+  sort(a, a + n);
+  for(int i = 0, j = n - 1; i < j; ){
+    if(a[i].f + a[j].f == x) return !(cout << a[i].s << ' ' << a[j].s);
+    else if(a[i].f + a[j].f < x) i++;
+    else j--;
+  }
 
-    cout << "IMPOSSIBLE";
-    return 0;
+  cout << "IMPOSSIBLE";
 }

@@ -1,28 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define endl '\n'
+
+multiset <int> s;
+int n, m;
+
 int main(){
-	int n, m;
-	cin >> n >> m;
-	multiset<int> a;
-	for(int i = 0; i < n; i++){
-		int l;
-		cin >> l;
-		a.insert(l);
-	}
-	// tim gtln <= maxprice => tim min > maxprice
-	for(int i = 0; i < m; i++){
-		int l;
-		cin >> l;
-		auto it = a.upper_bound(l);
-		if(it == a.begin()){
-			cout << -1 << endl;
-        }
-		else{
-            it--;
-            cout << *it << endl;
-            a.erase(it);
-		}
-	}
-	return 0;
+  for(cin >> n >> m; n--; ){
+    int x;
+    cin >> x;
+    s.insert(x);
+  }
+
+  while(m--){
+    int x;
+    cin >> x;
+    auto it = s.upper_bound(x);
+    if(it == s.begin()){
+      cout << "-1\n";
+      continue;
+    }
+    cout << *(--it) << '\n';
+    s.erase(it);
+  }
+
+  return 0;
 }
