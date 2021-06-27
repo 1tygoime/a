@@ -1,17 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int bin(string s, int length){
-    if (s.length() == length) return 1;
-    if (s[s.length() - 1] == '0') return bin(s + "1", length);
-    else return bin(s + "0", length) + bin(s + "1", length);
+int n;
+
+int bin(char last, int len){
+    if (len == n) return 1;
+    if (last == '0') return bin('1', len + 1);
+    else return bin('0', len + 1) + bin('1', len + 1);
 }
 
 int main()
 {
-    int n;
     cin >> n;
-    string s = "";
-    cout << bin(s,n);
+    cout << bin('0', 1) + bin('1', 1);
     return 0;
 }

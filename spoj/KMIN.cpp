@@ -1,19 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define int long long
-
 struct element{
   int sum, pos_a, pos_b;
-  bool operator <(const element &i){
-    return sum < i.sum;
+};
+
+struct cmp{
+  bool operator()(const element &a, const element &b){
+    if(a.sum != b.sum) return a.sum < b.sum;
+    if(a.pos_a != b.pos_a) return a.pos_a < b.pos_a;
+    return a.pos_b < b.pos_b;
   }
 };
 
 int m, n, k, a[50001], b[50001];
-set<element> pq;
+set<element, cmp> pq;
 
-int32_t main(){
+int main(){
   cin >> m >> n >> k;
 
   for(int i = 1; i <= m; i++) cin >> a[i];
