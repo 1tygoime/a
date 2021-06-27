@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool KiemTraSNT(long long n){
+bool c(long long n){
     if (n < 2) return false;
     else{
         long long count(0);
@@ -18,7 +18,7 @@ int main(){
     for (long long i = 1; i <= m; i++)
         cin >> a[i];
     for (long long i = 1; i <= m; i++){
-        bool isTrue = KiemTraSNT(a[i]);
+        bool isTrue = c(a[i]);
         if (n % a[i] == 0 && isTrue == true) cout << "YES \n";
         else cout << "NO \n";
     }
