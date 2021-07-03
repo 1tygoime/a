@@ -2,14 +2,10 @@
 using namespace std;
 
 int main(){
-    long long res(1);
-    int n;
-    cin >> n;
+    int m,n;
+    cin >> n >> m;
     for (int i = 1; i <= n; i++){
-        res*=2;
+        if (i % m == 0) cout << i << endl;
     }
-    res++;
-    res*=res;
-    cout<<res;
     return 0;
 }

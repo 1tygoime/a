@@ -25,15 +25,15 @@ void del_1(){
     if(s[i] == ')'){
       bool ex = 0;
 
-      while(!st.empty() && st.top().first != '(')
-        ex |= st.top().first == '+' || st.top().first == '-',
+      while(!st.empty() && st.top().first != '('){
+        if(st.top().first == '+' || st.top().first == '-') ex = 1;
         st.pop();
+      }
 
       if(!ex) d[st.top().second] = 1, d[i] = 1;
       auto top = st.top();
       st.pop();
 
-      if(!st.empty() && st.top().first != '-') d[i] = 1, d[top.second] = 1;
     }
     else st.push({s[i], i});
 
@@ -41,15 +41,22 @@ void del_1(){
 }
 
 void del_2(){
+  stack<pair<char, int>> st;
   memset(d, 0, sizeof(d));
-  if(s[0] != '(') return;
 
-  for(int j = 1; j < (int)s.size(); j++) if(s[j] == ')'){
-    d[j] = 1, d[0] = 1;
-//    cout << j << endl;
-    get();
-    return;
-  }
+  for(int i = (int)s.size() - 1; i >= 0; i--)
+    if(s[i] == '('){
+      bool ok = i == 0 || s[i - 1] != '-';
+
+      while(!st.empty() && st.top().first != ')') st.pop();
+
+      auto top = st.top(); st.pop();
+      if(ok) d[top.second] = 1, d[i] = 1;
+
+    }
+    else st.push({s[i], i});
+
+  get();
 }
 
 int main(){
