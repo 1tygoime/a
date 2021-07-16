@@ -1,4 +1,3 @@
-/* LTo5 */
 // quy dong mau so de rut a tu cac hang so
 // a = ... , nhan thay m tang a giam=>limit a=0 m=2*n
 #include <bits/stdc++.h>
