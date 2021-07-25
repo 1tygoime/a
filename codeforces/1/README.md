@@ -1,0 +1,1 @@
+https://codeforces.com/contest/<number>/problem/<letter>
