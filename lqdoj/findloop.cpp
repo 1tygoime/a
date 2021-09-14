@@ -1,5 +1,9 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
+
+#pragma GCC optimize("Ofast")
+#pragma GCC target("fma,sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,tune=native")
+#pragma GCC optimize("unroll-loops")
 
 long long a, b, c;
 
