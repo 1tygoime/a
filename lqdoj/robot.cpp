@@ -9,8 +9,8 @@ struct state{
   robot x, y;
 };
 
-const int dx[] = {-1, 0, 0, 1},
-          dy[] = {0, -1, 1, 0};
+const int dx[] = {-1, 0, 1, 0},
+          dy[] = {0, 1, 0, -1};
 
 int m, n;
 vector<vector<int>> a;
@@ -39,10 +39,10 @@ int main(){
   queue<state> q;
   vector<vector<vector<vector<vector<vector<int>>>>>> d(max(m, n) + 1, vector<vector<vector<vector<vector<int>>>>>(max(m, n) + 1, vector<vector<vector<vector<int>>>>(4, vector<vector<vector<int>>> (max(m, n) + 1, vector<vector<int>> (max(m, n) + 1, vector<int> (4, -1))))));
 
-  robot f = {1, 1, 2}, s = {m, n, 1};
+  robot f = {1, 1, 1}, s = {m, n, 3};
   q.push({f, s});
 
-  d[1][1][2][m][n][1] = 0;
+  d[1][1][1][m][n][3] = 0;
 
   while(!q.empty()){
     f = q.front().x, s = q.front().y;
@@ -55,19 +55,19 @@ int main(){
 
     //A
     if(d[f.x][f.y][(f.dir + 1) % 4][s.x][s.y][(s.dir + 2) % 4] == -1){
-      d[f.x][f.y][(f.dir + 1) % 4][s.x][s.y][(s.dir + 2) % 4] = cur_val;
+      d[f.x][f.y][(f.dir + 1) % 4][s.x][s.y][(s.dir + 2) % 4] = cur_val + 1;
       q.push({ {f.x, f.y, (f.dir + 1) % 4}, {s.x, s.y, (s.dir + 2) % 4} });
     }
 
     //B
     if(d[f.x][f.y][(f.dir + 2) % 4][s.x][s.y][(s.dir + 1) % 4] == -1){
-      d[f.x][f.y][(f.dir + 2) % 4][s.x][s.y][(s.dir + 1) % 4] = cur_val;
+      d[f.x][f.y][(f.dir + 2) % 4][s.x][s.y][(s.dir + 1) % 4] = cur_val + 1;
       q.push({ {f.x, f.y, (f.dir + 2) % 4}, {s.x, s.y, (s.dir + 1) % 4} });
     }
 
     //G
     bool can1 = get(f), can2 = get(s);
-//    if(!can1 && !can2) continue;
+    if(!can1 && !can2) continue;
 
     if(d[f.x][f.y][f.dir][s.x][s.y][s.dir] == -1){
       d[f.x][f.y][f.dir][s.x][s.y][s.dir] = cur_val + 1;
@@ -75,11 +75,11 @@ int main(){
     }
   }
 
-//  for(int x = 1; x <= m; x++)
-//    for(int y = 1; y <= n; y++)
-//      for(int dir = 0; dir < 4; dir++)
-//        for(int dir1 = 0; dir1 < 4; dir1++)
-//          cout << d[x][y][dir][x][y][dir1] << endl;
+//  for(int i = 1; i <= m; i++)
+//    for(int j = 1; j <= n; j++)
+//      for(int dir1 = 0; dir1 <= 3; dir1++)
+//        for(int dir2 = 0; dir2 <= 3; dir2++)
+//          cout << d[i][j][dir1][i][j][dir2] << '\n';
 
   cout << -1;
 }
