@@ -42,4 +42,9 @@
 *.out
 *.app
 
+# Input / Output
+*.ans
+*.out
+*.inp
+
 # End of https://www.toptal.com/developers/gitignore/api/c++
