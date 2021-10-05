@@ -3,9 +3,11 @@ using namespace std;
 
 long long x, s, s_min, res = -1e16;
 
-int main(){
+int main()
+{
   int n;
-  for(cin >> n; n--; ){
+  for (cin >> n; n--;)
+  {
     cin >> x;
     s += x;
     res = max(res, s - s_min);
@@ -14,4 +16,3 @@ int main(){
   cout << res;
   return 0;
 }
-    

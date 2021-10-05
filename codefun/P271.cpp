@@ -1,18 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
-long long a[100005],x,k;
+long long a[100005], x, k;
 int n;
-void nhap(){
+void nhap()
+{
     cin >> n >> x;
-    for (int i = 0 ; i < n; i++)
+    for (int i = 0; i < n; i++)
         cin >> a[i];
-    int i = n-x%n;
-    for (int j = 0; j < n; j++,i++)
-        cout<<a[i%n] <<' ';
+    int i = n - x % n;
+    for (int j = 0; j < n; j++, i++)
+        cout << a[i % n] << ' ';
 }
 
-
-int main(){
+int main()
+{
     nhap();
     return 0;
 }

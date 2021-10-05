@@ -5,6 +5,6 @@ int main()
 {
     char a;
     cin >> a;
-    cout << char(a+33);
+    cout << char(a + 33);
     return 0;
 }

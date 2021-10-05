@@ -1,10 +1,13 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    long long a,b;
+int main()
+{
+    long long a, b;
     cin >> a >> b;
-    if (a > b) cout << "YES";
-    else cout << "NO";
+    if (a > b)
+        cout << "YES";
+    else
+        cout << "NO";
     return 0;
 }

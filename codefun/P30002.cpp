@@ -1,6 +1,5 @@
 //cre: https://www.geeksforgeeks.org/count-fibonacci-numbers-given-range-log-time/
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -13,7 +12,7 @@ long long fibo(long long a, long long b)
     while (f1 <= b)
     {
         if (f1 >= a)
-           result++;
+            result++;
         f1 = f2;
         f2 = f3;
         f3 = f1 + f2;
@@ -24,9 +23,8 @@ long long fibo(long long a, long long b)
 
 int main()
 {
-    long long a,b;
+    long long a, b;
     cin >> a >> b;
-    cout << fibo(a,b);
-   return 0;
-
+    cout << fibo(a, b);
+    return 0;
 }

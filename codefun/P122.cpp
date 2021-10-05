@@ -1,10 +1,13 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    long long a,b;
+int main()
+{
+    long long a, b;
     cin >> a >> b;
-    if (a == b) cout << a << " = " << b;
-    else cout << a << " != " << b;
+    if (a == b)
+        cout << a << " = " << b;
+    else
+        cout << a << " != " << b;
     return 0;
 }

@@ -1,13 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-int t,a,b;
+int t, a, b;
 
-int main(){
+int main()
+{
     cin >> t;
-    for (int i = 1; i <= t; i++){
+    for (int i = 1; i <= t; i++)
+    {
         cin >> a >> b;
-        if (b%2==1)
+        if (b % 2 == 1)
             cout << "Minh 11";
         else
             cout << "Thanh";

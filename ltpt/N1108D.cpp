@@ -3,21 +3,28 @@
 using namespace std;
 ll n;
 char a[30];
-void Xuat(){
-    for (int k = 1; k <= n; k++){
+void Xuat()
+{
+    for (int k = 1; k <= n; k++)
+    {
         if (a[k] == 'B' && a[k + 1] == 'B')
             return;
     }
-    for (int k = 1; k <= n; k++){
+    for (int k = 1; k <= n; k++)
+    {
         cout << a[k];
     }
     cout << '\n';
 }
-ll Try(ll i){
-    for (char j = 'A'; j <= 'B'; j++){
+ll Try(ll i)
+{
+    for (char j = 'A'; j <= 'B'; j++)
+    {
         a[i] = j;
-        if (i == n) Xuat();
-        else Try(i+1);
+        if (i == n)
+            Xuat();
+        else
+            Try(i + 1);
     }
 }
 int main()
@@ -25,7 +32,6 @@ int main()
     cin >> n;
     Try(1);
 }
-
 
 //#include <bits/stdc++.h>
 //using namespace std;

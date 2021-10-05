@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     short int a, b, c, d;
     long long result1(1), result2(1);
     cin >> a >> b >> c >> d;

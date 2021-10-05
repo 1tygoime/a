@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     long long n;
     cin >> n;
-    for (long long i = 1; i <= n; i++) cout << i << '\n';
+    for (long long i = 1; i <= n; i++)
+        cout << i << '\n';
     return 0;
 }

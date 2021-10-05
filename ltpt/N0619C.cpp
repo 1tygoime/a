@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    string s1,s2,s3;
+    string s1, s2, s3;
     cin >> s1 >> s2 >> s3;
     for (int i = 1; i < s1.length(); i++)
         if (isupper(s1[i]))

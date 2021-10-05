@@ -3,16 +3,19 @@ using namespace std;
 
 long long a[100005];
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
-    for (int i = 1; i <= n; i++){
+    for (int i = 1; i <= n; i++)
+    {
         cin >> a[i];
-        a[i] += a[i-1];
+        a[i] += a[i - 1];
     }
     int q;
     cin >> q;
-    while (q--){
+    while (q--)
+    {
         int p;
         cin >> p;
         cout << a[p] << '\n';

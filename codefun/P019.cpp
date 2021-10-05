@@ -1,13 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     long long x;
-    while (cin >> x){
-        if (x == 19){
+    while (cin >> x)
+    {
+        if (x == 19)
+        {
             cout << 19;
             break;
         }
     }
-    if (x!=19) cout << "IMPOSSIBLE";
+    if (x != 19)
+        cout << "IMPOSSIBLE";
     return 0;
 }

@@ -7,7 +7,8 @@ using namespace std;
 
 bool c;
 
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
@@ -15,20 +16,23 @@ int main(){
     int n;
     cin >> n;
 
-    for(int i = 1; i <= n; i++){
+    for (int i = 1; i <= n; i++)
+    {
         ll s = 1LL * i * (i + 1) / 2;
-        if (s % 2) continue;
-		// check if exists i : 1+2+...+i=s/2
-        ll x = s*2;
+        if (s % 2)
+            continue;
+        // check if exists i : 1+2+...+i=s/2
+        ll x = s * 2;
         x = x * 2 + 1;
-        if (sqrt(x) == (ll)sqrt(x)) {
+        if (sqrt(x) == (ll)sqrt(x))
+        {
             c = 1;
             cout << i << ' ';
         }
     }
 
-    if (!c) cout << -1;
+    if (!c)
+        cout << -1;
 
     return 0;
 }
-    

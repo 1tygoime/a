@@ -3,10 +3,14 @@ using namespace std;
 
 int n;
 
-int bin(char last, int len){
-    if (len == n) return 1;
-    if (last == '0') return bin('1', len + 1);
-    else return bin('0', len + 1) + bin('1', len + 1);
+int bin(char last, int len)
+{
+    if (len == n)
+        return 1;
+    if (last == '0')
+        return bin('1', len + 1);
+    else
+        return bin('0', len + 1) + bin('1', len + 1);
 }
 
 int main()

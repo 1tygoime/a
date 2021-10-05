@@ -1,9 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     int n;
     cin >> n;
-    if ((n%3==0)&&(n!=3)) cout << "YES";
-    else cout << "NO";
+    if ((n % 3 == 0) && (n != 3))
+        cout << "YES";
+    else
+        cout << "NO";
     return 0;
 }

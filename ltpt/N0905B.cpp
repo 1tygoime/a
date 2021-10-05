@@ -3,7 +3,8 @@ using namespace std;
 
 #define ll long long
 
-struct CT{
+struct CT
+{
     string ten;
     int can;
     int cao;
@@ -17,9 +18,11 @@ int main()
     cin >> n;
     for (int i = 1; i <= n; i++)
         cin >> cauthu[i].ten >> cauthu[i].can >> cauthu[i].cao >> cauthu[i].tuoi;
-    int mi = cauthu[1].tuoi,j;
-    for (int i = 2; i <= n; i++){
-        if (cauthu[i].tuoi < mi) {
+    int mi = cauthu[1].tuoi, j;
+    for (int i = 2; i <= n; i++)
+    {
+        if (cauthu[i].tuoi < mi)
+        {
             mi = cauthu[i].tuoi;
             j = i;
         }

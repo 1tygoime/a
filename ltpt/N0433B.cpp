@@ -1,36 +1,45 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
     long long a[100000];
-    int n,cnt(0);
+    int n, cnt(0);
     cin >> n;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++)
+    {
         cin >> a[i];
         if (a[i] == 1)
             cnt++;
     }
     if (cnt == 0)
         cout << -1;
+    else if (cnt == n)
+    {
+        for (int i = 1; i <= n; i++)
+            cout << 1 << ' ';
+    }
+    else if (cnt == 1)
+        cout << 1;
     else
-        if (cnt == n){
-            for (int i = 1; i <= n; i++)
-                cout << 1 << ' ';
-        }
-        else if (cnt == 1) cout << 1;
-        else{
-            int dem(1),m(1),c(1);
-            for (int i = 2; i <= n+1; i++){
-                if (a[i] == 1 && a[i-1] == 1) dem++;
-                else{
-                    if (m <= dem){ m = dem;
-                        c=i-1;
-                    }
-                    dem = 1;
+    {
+        int dem(1), m(1), c(1);
+        for (int i = 2; i <= n + 1; i++)
+        {
+            if (a[i] == 1 && a[i - 1] == 1)
+                dem++;
+            else
+            {
+                if (m <= dem)
+                {
+                    m = dem;
+                    c = i - 1;
                 }
+                dem = 1;
             }
-            for (int i = c-m+1; i <= c; i++)
-                cout << a[i] << ' ';
+        }
+        for (int i = c - m + 1; i <= c; i++)
+            cout << a[i] << ' ';
     }
     return 0;
 }

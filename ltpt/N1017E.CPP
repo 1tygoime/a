@@ -9,19 +9,25 @@ using namespace std;
 const ll mod = 1e9 + 7;
 const ll oo = 1e9 + 6;
 
-map <ll, ll> F;
+map<ll, ll> F;
 
-ll f(ll n){
-    if (F.count(n)) return F[n];
-	ll k=n/2;
-	if (n%2==0) { // n=2*k
-		return F[n] = (f(k) % oo * f(k) % oo + f(k-1) % oo *f(k-1) % oo) % oo;
-	} else { // n=2*k+1
-		return F[n] = (f(k) % oo *f(k+1) % oo + f(k-1) % oo *f(k) % oo) % oo;
-	}
+ll f(ll n)
+{
+    if (F.count(n))
+        return F[n];
+    ll k = n / 2;
+    if (n % 2 == 0)
+    { // n=2*k
+        return F[n] = (f(k) % oo * f(k) % oo + f(k - 1) % oo * f(k - 1) % oo) % oo;
+    }
+    else
+    { // n=2*k+1
+        return F[n] = (f(k) % oo * f(k + 1) % oo + f(k - 1) % oo * f(k) % oo) % oo;
+    }
 }
 
-ll mul(ll a, ll b){
+ll mul(ll a, ll b)
+{
     if (b == 0)
         return 0;
     ll t = mul(a, b / 2) % mod;
@@ -31,7 +37,8 @@ ll mul(ll a, ll b){
     return t;
 }
 
-ll pw(ll a, ll n){
+ll pw(ll a, ll n)
+{
     if (n == 0)
         return 1;
     ll t = pw(a, n / 2) % mod;
@@ -41,7 +48,8 @@ ll pw(ll a, ll n){
     return t;
 }
 
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);

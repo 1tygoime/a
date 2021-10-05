@@ -7,29 +7,37 @@ Xoa so phan biet co the lam 2 cach:
 #include <bits/stdc++.h>
 using namespace std;
 
-void Xoa(int a[], int &n, int location){
+void Xoa(int a[], int &n, int location)
+{
     for (int i = location + 1; i < n; i++)
-        a[i - 1]= a[i];
+        a[i - 1] = a[i];
     n--;
 }
 
-void Trung(int a[], int &n){
-    for (int i = 0; i < n; i++){
-        for (int j = i + 1; j < n; j++){
-            if (a[i] == a[j]){
-                Xoa(a,n,j);
+void Trung(int a[], int &n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if (a[i] == a[j])
+            {
+                Xoa(a, n, j);
                 j--;
             }
         }
     }
 }
 
-int main(){
-    int a[100005],n;
+int main()
+{
+    int a[100005], n;
     cin >> n;
-    for (int i = 0; i < n; i++) cin >> a[i];
-    Trung(a,n);
-    for (int i = 0; i < n; i++) cout << a[i] << ' ';
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    Trung(a, n);
+    for (int i = 0; i < n; i++)
+        cout << a[i] << ' ';
     return 0;
 }
 

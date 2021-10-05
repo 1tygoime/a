@@ -5,13 +5,16 @@ using namespace std;
 #define pb push_back
 #define sz(v) (int)(v).size()
 
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);
-    cin.tie(NULL); cout.tie(NULL);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-    vector <int> v;
+    vector<int> v;
     int n;
-    for(cin >> n; n--; ){
+    for (cin >> n; n--;)
+    {
         int x;
         cin >> x;
         v.push_back(x);
@@ -23,4 +26,3 @@ int main(){
         cout << v[sz(v) / 2 - 1];
     return 0;
 }
-    

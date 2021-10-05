@@ -1,17 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define MAX 100
-int main(){
-    string s,s1;
-    cin >> s >> s1;
-    int chk(1),cnt(0);
-    for (int i = 0; i < s.length(); i++){
-        string tmp = s.substr(i,s1.size());
-        if (tmp == s1)
-            cnt++;
-    }
-    cout << cnt;
-    return 0;
+int main()
+{
+  string s, s1;
+  cin >> s >> s1;
+  int chk(1), cnt(0);
+  for (int i = 0; i < s.length(); i++)
+  {
+    string tmp = s.substr(i, s1.size());
+    if (tmp == s1)
+      cnt++;
+  }
+  cout << cnt;
+  return 0;
 }
 //    for (auto x : str){
 //        if (x == ' '){
@@ -25,7 +27,6 @@ int main(){
 //
 //    }
 //            cout << word << endl;
-
 
 //    long long n,a[100][100],tong(0);
 //    cin >> n;
@@ -42,8 +43,6 @@ int main(){
 //            }
 //    }
 //    cout << tong;
-
-
 
 //    int count(1),sentence(0);
 //    string str,token;
@@ -112,7 +111,7 @@ int main(){
 //    cout << tongMAX << ' ' << cotMAX+1;
 //    return 0;
 //}
-  //  long long n,a[100005],count(0);
+//  long long n,a[100005],count(0);
 //    cin >> n;
 //    for (long long i = 1; i <= n; i++) cin >> a[i];
 //    for (long long i = 1; i <= n - 1; i++){

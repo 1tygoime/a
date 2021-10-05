@@ -4,29 +4,35 @@ using namespace std;
 int n;
 char a[50];
 
-void Xuat(){
-    for (int i = 0; i < 2*n; i ++)
+void Xuat()
+{
+    for (int i = 0; i < 2 * n; i++)
         cout << a[i];
     cout << '\n';
 }
 
-void Try(int i, int mo, int dong){
-    if (i == 2*n)
+void Try(int i, int mo, int dong)
+{
+    if (i == 2 * n)
         Xuat();
-    else{
-        if (mo < n){
+    else
+    {
+        if (mo < n)
+        {
             a[i] = '(';
-            Try(i+1,mo+1,dong);
+            Try(i + 1, mo + 1, dong);
         }
-        if (dong < mo){
+        if (dong < mo)
+        {
             a[i] = ')';
-            Try(i+1,mo,dong+1);
+            Try(i + 1, mo, dong + 1);
         }
     }
 }
 
-int main(){
+int main()
+{
     cin >> n;
-    Try(0,0,0);
+    Try(0, 0, 0);
     return 0;
 }

@@ -3,9 +3,10 @@ using namespace std;
 
 int main()
 {
-	int WCYear;
-	cin >> WCYear;
-	switch (WCYear){
+    int WCYear;
+    cin >> WCYear;
+    switch (WCYear)
+    {
     case 1930:
         cout << "Uruguay";
         break;
@@ -69,6 +70,6 @@ int main()
     default:
         cout << "Vietnam";
         break;
-	}
-	return 0;
+    }
+    return 0;
 }

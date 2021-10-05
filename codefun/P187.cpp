@@ -1,10 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
     long long n;
     cin >> n;
-    for (long long i = 1; i <= n; i++) cout << i << ' ';
+    for (long long i = 1; i <= n; i++)
+        cout << i << ' ';
     cout << '!';
     return 0;
 }

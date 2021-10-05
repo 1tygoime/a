@@ -1,24 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    long long a[100005],n,check(0),k;
+int main()
+{
+    long long a[100005], n, check(0), k;
     cin >> n;
-    for (long long i = 1; i <= n; i++){
+    for (long long i = 1; i <= n; i++)
+    {
         cin >> a[i];
-        if (a[i] < 0){
+        if (a[i] < 0)
+        {
             check = -1;
             k = i;
             break;
         }
     }
-    if (check == -1){
-        while (a[k] <= 0){
+    if (check == -1)
+    {
+        while (a[k] <= 0)
+        {
             k--;
         }
         cout << a[k];
     }
-    else if (check == 0) cout << 0;
+    else if (check == 0)
+        cout << 0;
     return 0;
 }
 

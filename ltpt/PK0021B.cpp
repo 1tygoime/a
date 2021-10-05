@@ -3,11 +3,12 @@ using namespace std;
 
 int n, k;
 
-int main(){
+int main()
+{
   cin >> n >> k;
 
   int i = 1, s = k, sp = k;
-  for(i = 1; s < n; i++)
+  for (i = 1; s < n; i++)
     sp <<= 1, s += sp;
 
   cout << i;

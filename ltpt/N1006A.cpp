@@ -6,14 +6,15 @@ using namespace std;
 
 int main()
 {
-    ull n,a[100005],i(0),k;
+    ull n, a[100005], i(0), k;
     cin >> n >> k;
-    while (n > 0){
+    while (n > 0)
+    {
         a[i] = n % k;
         n /= k;
         i++;
     }
-    for (ull j = i-1; j >= 0; j--)
+    for (ull j = i - 1; j >= 0; j--)
         cout << a[j];
     return 0;
 }

@@ -1,6 +1,6 @@
 # codefun.vn
 
-Code chỉ mang tính chất tham khảo
+Code bẩn, UB tràn lan, chỉ mang tính chất tham khảo
 
 # [**Danh sách các bài mà các bạn dễ mắc vấn đề về nó**](https://codefun.vn/posts/1491)
 

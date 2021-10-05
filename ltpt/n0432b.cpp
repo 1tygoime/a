@@ -2,29 +2,30 @@
 using namespace std;
 #define MAX 100005
 
-void up(int a[], int lct){
+void up(int a[], int lct)
+{
     int tmp = a[lct];
     for (int i = lct; i > 0; i--)
-        a[i] = a[i-1];
+        a[i] = a[i - 1];
     a[0] = tmp;
 }
 
-int main(){
-    int a[MAX],n,b[MAX];
+int main()
+{
+    int a[MAX], n, b[MAX];
     cin >> n;
     for (int i = 0; i < n; i++)
         cin >> a[i];
-        // lech thu tu nen can 2 lan up
+    // lech thu tu nen can 2 lan up
     for (int i = 0; i < n; i++)
         if (a[i] % 2 == 0)
-            up(a,i);
+            up(a, i);
     for (int i = 0; i < n; i++)
         if (a[i] % 2 == 0)
-            up(a,i);
+            up(a, i);
     for (int i = 0; i < n; i++)
         cout << a[i] << ' ';
 }
-
 
 //#define MAX 100
 //

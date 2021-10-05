@@ -3,8 +3,8 @@ using namespace std;
 
 int main()
 {
-    long long n,k;
+    long long n, k;
     cin >> n >> k;
-    cout << (n/k) + (n % k);
+    cout << (n / k) + (n % k);
     return 0;
 }

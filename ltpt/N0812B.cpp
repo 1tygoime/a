@@ -3,27 +3,31 @@ using namespace std;
 #define MAX 100000
 #define ll long long
 
-bool isPrime(ll n){
+bool isPrime(ll n)
+{
     if (n < 2)
         return false;
+    else if (n == 2)
+        return true;
+    else if (n % 2 == 0)
+        return false;
     else
-        if (n == 2)
-            return true;
-        else
-            if (n % 2 == 0)
-                return false;
-    else{
+    {
         for (int i = 3; i <= sqrt(n); i++)
-            if (n % i == 0) return false;
+            if (n % i == 0)
+                return false;
         return true;
     }
 }
 
-int main(){
-    int i = 2,n, dem = 0,tmp;
+int main()
+{
+    int i = 2, n, dem = 0, tmp;
     cin >> n;
-    while (dem < n){
-        if (isPrime(i)){
+    while (dem < n)
+    {
+        if (isPrime(i))
+        {
             dem++;
             tmp = i;
         }
@@ -46,7 +50,6 @@ int main(){
 //    }
 //            cout << word << endl;
 
-
 //    long long n,a[100][100],tong(0);
 //    cin >> n;
 //    for (long long i = 0; i < n; i++){
@@ -62,8 +65,6 @@ int main(){
 //            }
 //    }
 //    cout << tong;
-
-
 
 //    int count(1),sentence(0);
 //    string str,token;
@@ -132,7 +133,7 @@ int main(){
 //    cout << tongMAX << ' ' << cotMAX+1;
 //    return 0;
 //}
-  //  long long n,a[100005],count(0);
+//  long long n,a[100005],count(0);
 //    cin >> n;
 //    for (long long i = 1; i <= n; i++) cin >> a[i];
 //    for (long long i = 1; i <= n - 1; i++){

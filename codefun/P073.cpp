@@ -1,14 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
-    unsigned long long n,temp1,tong(0);
+int main()
+{
+    unsigned long long n, temp1, tong(0);
     cin >> n;
     temp1 = n;
-    while (n > 0){
-        tong += n%10;
+    while (n > 0)
+    {
+        tong += n % 10;
         n /= 10;
     }
-    if (temp1 % tong == 0) cout << "YES";
-    else cout << "NO";
+    if (temp1 % tong == 0)
+        cout << "YES";
+    else
+        cout << "NO";
     return 0;
 }

@@ -1,15 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define MAX 100
-int main(){
-    string s,s1;
+int main()
+{
+    string s, s1;
     cin >> s >> s1;
-    int chk(1),cnt(0);
-    for (int i = 0; i < s.length(); i++){
-        if (s[i] == s1[0]){
+    int chk(1), cnt(0);
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (s[i] == s1[0])
+        {
             chk = 1;
-            for (int j = 0; j < s1.length(); j++){
-                if (s1[j] != s[i+j]){
+            for (int j = 0; j < s1.length(); j++)
+            {
+                if (s1[j] != s[i + j])
+                {
                     chk = 0;
                     break;
                 }

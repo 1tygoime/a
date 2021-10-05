@@ -2,41 +2,50 @@
 using namespace std;
 #define ll long long
 
-ll n,m,k,s(0),a[20005];
+ll n, m, k, s(0), a[20005];
 int t;
 
-void res(){
+void res()
+{
     ll h(0);
     cin >> n >> m >> k;
-    for (ll i = 1; i <= n; i++){
+    for (ll i = 1; i <= n; i++)
+    {
         cin >> a[i];
     }
-    for (ll i = 1; i <= n; i++){
-        if(m<a[i]){
-            while(m<a[i]){
-                m+=20;
+    for (ll i = 1; i <= n; i++)
+    {
+        if (m < a[i])
+        {
+            while (m < a[i])
+            {
+                m += 20;
                 h++;
             }
         }
-        if(m>=a[i]){
-            m-=a[i];
+        if (m >= a[i])
+        {
+            m -= a[i];
         }
     }
-    if(h>k)
-        cout<<"NO";
+    if (h > k)
+        cout << "NO";
     else
-        cout<<"YES\n"<<h;
+        cout << "YES\n"
+             << h;
 }
 
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     cout.tie(0);
     cin >> t;
-    while(t--){
+    while (t--)
+    {
         res();
-        if(t>0)
-            cout<<'\n';
+        if (t > 0)
+            cout << '\n';
     }
     return 0;
 }

@@ -1,9 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
-    getline(cin,str);
+    getline(cin, str);
     cout << str.length();
     return 0;
 }

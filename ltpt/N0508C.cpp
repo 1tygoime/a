@@ -1,20 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
     typedef long long ll;
-    ll a[100][100],n,s(0);
+    ll a[100][100], n, s(0);
     cin >> n;
-    for (ll i = 0; i < n; i++){
+    for (ll i = 0; i < n; i++)
+    {
         for (ll j = 0; j < n; j++)
             cin >> a[i][j];
     }
     //duyet cot
     for (ll i = 0; i < n; i++)
-        s += (a[0][i]+a[n-1][i]);
+        s += (a[0][i] + a[n - 1][i]);
     //duyet dong
-    for (ll i = 1; i < n-1; i++) // tru 4 goc
-        s += (a[i][0]+a[i][n-1]);
+    for (ll i = 1; i < n - 1; i++) // tru 4 goc
+        s += (a[i][0] + a[i][n - 1]);
     cout << s;
     return 0;
 }

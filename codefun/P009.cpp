@@ -6,6 +6,6 @@ int main()
     char a;
     int n;
     cin >> a >> n;
-    cout << char((a + n - 'a')%26 + 'a');
+    cout << char((a + n - 'a') % 26 + 'a');
     return 0;
 }

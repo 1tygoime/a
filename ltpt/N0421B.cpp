@@ -1,17 +1,21 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int n; map <int, int> mp;
+int n;
+map<int, int> mp;
 
-int main(){
-  for(cin >> n; n--; ){
+int main()
+{
+  for (cin >> n; n--;)
+  {
     int x;
     cin >> x;
     mp[x]++;
   }
 
   int res = 0;
-  for(auto &x: mp){
+  for (auto &x : mp)
+  {
     res += x.second / x.first;
   }
 

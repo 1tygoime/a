@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     unsigned long long x, y, result(1);
     cin >> x >> y;
     for (unsigned long long i = 1; i <= y; i++)

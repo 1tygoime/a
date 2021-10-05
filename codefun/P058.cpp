@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     long long x;
     cin >> x;
-    cout << x/2 << ' ' << x - x/2;
+    cout << x / 2 << ' ' << x - x / 2;
     return 0;
 }

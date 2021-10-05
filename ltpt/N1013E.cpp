@@ -2,16 +2,19 @@
 using namespace std;
 #define ll long long
 
-ll s(ll n){
-    ll tmp = sqrt(n),t(0);
-    for (int i = 1; i <= tmp ; i++){
-        t += n/i;
+ll s(ll n)
+{
+    ll tmp = sqrt(n), t(0);
+    for (int i = 1; i <= tmp; i++)
+    {
+        t += n / i;
     }
-    t = 2 * t-(tmp*tmp);
+    t = 2 * t - (tmp * tmp);
     return t;
 }
 
-int main(){
+int main()
+{
     ll n;
     cin >> n;
     cout << s(n);

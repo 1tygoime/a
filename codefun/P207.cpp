@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main () {
+int main()
+{
     long long n;
     string str;
     cin >> n >> str;

@@ -2,13 +2,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
     long long n;
     cin >> n;
-    for (long long i = 1; i <= n; i++){
-        long long a,b;
+    for (long long i = 1; i <= n; i++)
+    {
+        long long a, b;
         cin >> a >> b;
-        cout << __gcd(a,b) << '\n';
+        cout << __gcd(a, b) << '\n';
     }
     return 0;
 }

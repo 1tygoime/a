@@ -10,6 +10,6 @@ int main()
 {
     ll b;
     cin >> b;
-    cout << countSquares(1LL,b);
+    cout << countSquares(1LL, b);
     return 0;
 }

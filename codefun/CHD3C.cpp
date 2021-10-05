@@ -4,14 +4,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 long long n;
-int main(){
-    while (cin >> n){
-        if (n%2==1)
+int main()
+{
+    while (cin >> n)
+    {
+        if (n % 2 == 1)
             cout << "B\n";
-        else{
-            while(n%4==0)
-                n/=4;
-            if(n%2==1)
+        else
+        {
+            while (n % 4 == 0)
+                n /= 4;
+            if (n % 2 == 1)
                 cout << "B\n";
             else
                 cout << "A\n";

@@ -5,6 +5,6 @@ int main()
 {
     long long n;
     cin >> n;
-    cout << (n*(n-1)*(n-2))/6;
+    cout << (n * (n - 1) * (n - 2)) / 6;
     return 0;
 }

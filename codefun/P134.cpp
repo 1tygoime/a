@@ -1,10 +1,13 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
     long long n;
     cin >> n;
-    if (n%12 == 0) cout << "yes";
-    else cout << "no";
+    if (n % 12 == 0)
+        cout << "yes";
+    else
+        cout << "no";
     return 0;
 }
