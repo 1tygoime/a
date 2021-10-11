@@ -20,8 +20,7 @@ bool cmp(pii x, pii y)
 int main()
 {
     fast
-            cin >>
-        n;
+    cin >> n;
     for (int i = 0; i < n; i++)
     {
         cin >> a[i].first >> a[i].second;

@@ -14,8 +14,7 @@ int main()
 {
     fast
 
-            cin >>
-        k >> n >> base;
+    cin >> k >> n >> base;
     for (int i = 0; i <= n; i++)
     {
         //        C[0][i]=C[i][i]=1;
